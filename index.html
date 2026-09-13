@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Junisan Jean Navalga ✨ | Official Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pink: {
+                            light: '#FFE6F2',
+                            DEFAULT: '#FF99CC',
+                            medium: '#FF66B2',
+                            dark: '#FF3399',
+                        },
+                        lavender: '#F3E5FF',
+                        rose: '#FFE0EB',
+                    },
+                    fontFamily: {
+                        display: ['Playfair Display', 'serif'],
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow { text-shadow: 0 2px 10px rgba(255, 51, 153, 0.3); }
+            .card-shadow { box-shadow: 0 8px 30px rgba(255, 102, 178, 0.15); }
+            .gradient-pink { background: linear-gradient(135deg, #FFE6F2, #FFE0EB, #F3E5FF); }
+            .gradient-text { 
+                background: linear-gradient(90deg, #FF3399, #FF66B2, #FF99CC);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .border-pink-glow { border: 2px solid rgba(255, 153, 204, 0.5); box-shadow: 0 0 15px rgba(255, 153, 204, 0.3); }
+            .sparkle { animation: sparkle 2s infinite; }
+            .float { animation: float 6s ease-in-out infinite; }
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        * { scroll-behavior: smooth; }
+
+        body {
+            background: linear-gradient(135deg, #FFE6F2, #FFE0EB, #F3E5FF);
+            background-attachment: fixed;
+        }
+
+        .heart-cursor {
+            position: fixed;
+            width: 12px;
+            height: 12px;
+            background: #FF66B2;
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease;
+        }
+    </style>
+</head>
